@@ -14,3 +14,4 @@ depends on the instruction being executed.
 ![image](https://github.com/MohabAmged/Mips_MultiCycle/assets/68222258/b05797d2-cedd-4fad-ab0d-d95316aedf4f)
 # Reference
 Digital Design and Computer Architecture Second Edition, David Money Harris & Sarah L. Harris
+
