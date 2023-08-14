@@ -1,4 +1,17 @@
 `default_nettype none
+`include "alu.v"
+//`include "Alu_control.v"
+`include "Control_unit.v"
+`include "Counter.v"
+//`include "main_decoder.v"
+`include "Memory.v"
+`include "mux.v"
+`include "mux2x1.v"
+`include "reg.v"
+`include "Reg_file.v"
+`include "sign_extend.v"
+ 
+
 
 module MIPS  (
     input wire clk,
@@ -35,7 +48,7 @@ Register #(
     .WIDTH(WIDTH)
 ) DATA_Reg (
      .data_in(MemoryRead_Data),
-     .load(1),
+     .load(1'b1),
      .clk(clk),
      .rst(rst),
      .data_out(Data)
@@ -50,7 +63,7 @@ Register #(
     .WIDTH(WIDTH)
 ) Read_Reg1 (
      .data_in(RD1_out),
-     .load(1),
+     .load(1'b1),
      .clk(clk),
      .rst(rst),
      .data_out(A)
@@ -65,7 +78,7 @@ Register #(
     .WIDTH(WIDTH)
 ) Read_Reg2 (
      .data_in(RD2_out),
-     .load(1),
+     .load(1'b1),
      .clk(clk),
      .rst(rst),
      .data_out(B)
@@ -197,7 +210,7 @@ Register #(
     .WIDTH(BUS_WIDTH)
 ) ALU_Register (
      .data_in(ALUResult),
-     .load(1),
+     .load(1'b1),
      .clk(clk),
      .rst(rst),
      .data_out(ALUOut)
@@ -251,11 +264,11 @@ wire lord;
 
 
 // Control Unit Variables
-    wire [5:0]Funct;
+    //wire [5:0]Funct;
 // Control Unit Inst
 Control_unit control(
      .Opcode(Instr[31:26])    ,
-     .Funct (Funct)    ,
+     .Funct (Instr[5:0])    ,
      .rst (rst)           ,
      .clk (clk)           ,    
     . MemtoReg(MemtoReg)       ,

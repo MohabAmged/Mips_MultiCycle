@@ -3,8 +3,8 @@ module multiplexor4x1 #(
 )
  ( 
      // Define Inputs
-    input [Width-1:0] in0 , in1,in2,in3,
-    input [1:0]sel,
+    input wire [Width-1:0] in0 , in1,in2,in3,
+    input wire [1:0]sel,
     output reg [Width-1:0] mux_out  // Define Output
 );
     

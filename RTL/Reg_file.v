@@ -8,9 +8,9 @@ module Register_File #(
     input  wire [DEPTH-1:0]A1,      // First Address Port
     input  wire [DEPTH-1:0]A2,      // 2nd Address Port
     input  wire [DEPTH-1:0]A3,      // Third Address Port
-    input  wire [DEPTH-1:0]WD3,     // Write Data Port
-    output wire [DEPTH-1:0]RD1,     // First Read Port
-    output wire [DEPTH-1:0]RD2      // 2nd Read Port
+    input  wire [DATA_WIDTH-1:0]WD3,     // Write Data Port
+    output wire [DATA_WIDTH-1:0]RD1,     // First Read Port
+    output wire [DATA_WIDTH-1:0]RD2      // 2nd Read Port
 );
 
 // File Defination  
