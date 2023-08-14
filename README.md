@@ -9,6 +9,7 @@ and both instructions and Data are in the same memory.
 The control unit is more complex than the single cycle MIPS , the main controller is an FSM that applies the proper control
 signals on the proper cycles or steps. The sequence of control signals
 depends on the instruction being executed. 
+
 ![image](https://github.com/MohabAmged/Mips_MultiCycle/assets/68222258/ffc3c907-766b-4fb4-bfc7-83244ed15912)
 # FSM State Diagram
 ![image](https://github.com/MohabAmged/Mips_MultiCycle/assets/68222258/b05797d2-cedd-4fad-ab0d-d95316aedf4f)
